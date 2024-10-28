@@ -1,0 +1,28 @@
+{
+	"name": "WoWCharacter",
+	"version": "1.0",
+	"author": "Michiyo",
+	"url": "",
+	"description": "Makes a WoWCharacter and... stuff",
+	"license-name": "GPL-2.0+",
+	"type": "parserhook",
+	"AutoloadClasses": {
+		"WoWArmory": "WoWArmory_body.php"
+	},
+	"ExtensionMessagesFiles": {
+		"WoWArmory": "WoWArmory.magic.php"
+	},
+	"Hooks": {
+		"ParserFirstCallInit": "WoWArmory::WoWArmoryExcuse"
+	},
+	"config": {
+		"WoWArmorywgWoWArmoryToken": {
+			"value": "-",
+			"description": "ArmoryToken API Key"
+		}
+	},
+	"ConfigRegistry": {
+		"WoWArmory": "GlobalVarConfig::newInstance"
+	},
+	"manifest_version": 1
+}
